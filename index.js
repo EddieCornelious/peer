@@ -8,6 +8,7 @@ const server = http.createServer(app);
 const peerServer = ExpressPeerServer(server, {
   debug: true,
   path: '/',
+  port: 443
 });
 
 app.use('/peerjs', peerServer);
