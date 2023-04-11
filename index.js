@@ -6,14 +6,12 @@ const app = express();
 
 const server = http.createServer(app);
 const peerServer = ExpressPeerServer(server, {
-  proxied: true,
   debug: true,
-  path: '/'
 });
 
 app.use('/peerjs', peerServer);
 
-server.listen(process.env.PORT || 10000);
+server.listen(process.env.PORT || 443);
 
 /**
  * const peer = new Peer("someid", {
