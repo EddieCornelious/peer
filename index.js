@@ -12,7 +12,7 @@ const peerServer = ExpressPeerServer(server, {
 
 app.use('/peerjs', peerServer);
 
-server.listen(443);
+server.listen(process.env.PORT || 10000);
 
 /**
  * const peer = new Peer("someid", {
