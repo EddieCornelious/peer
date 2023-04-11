@@ -6,6 +6,7 @@ const app = express();
 
 const server = http.createServer(app);
 const peerServer = ExpressPeerServer(server, {
+  proxied: true,
   debug: true,
   path: '/'
 });
