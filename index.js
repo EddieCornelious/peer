@@ -7,13 +7,12 @@ const app = express();
 const server = http.createServer(app);
 const peerServer = ExpressPeerServer(server, {
   debug: true,
-  path: '/',
-  port: 443
+  path: '/'
 });
 
 app.use('/peerjs', peerServer);
 
-server.listen(9000);
+server.listen(443);
 
 /**
  * const peer = new Peer("someid", {
